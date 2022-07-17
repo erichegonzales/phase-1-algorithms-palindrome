@@ -1,6 +1,7 @@
 function isPalindrome(word) {
   // Write your algorithm here
   let middle = 0
+  if (word.length === 0 || word.length === 1) return true
   if (word.length % 2 === 0) middle = word.length / 2
   if (word.length % 2 === 1) middle = (word.length / 2) - 0.5
 
@@ -40,26 +41,31 @@ if (require.main === module) {
   // add your own custom tests in here
   console.log("Expecting: true");
   console.log("=>", isPalindrome("racecar"));
-
   console.log("");
 
-  console.log("Expecting: false");
+  console.log("Expecting: true");
   console.log("=>", isPalindrome("noon"));
-
   console.log("");
 
-  console.log("Expecting: false");
+  console.log("Expecting: true");
   console.log("=>", isPalindrome("repaper"));
+  console.log("");
 
+  console.log("Expecting: true");
+  console.log("=>", isPalindrome("a"));
+  console.log("");
+
+  console.log("Expecting: true");
+  console.log("=>", isPalindrome(""));
   console.log("");
 
   console.log("Expecting: false");
   console.log("=>", isPalindrome("robot"));
-
   console.log("");
 
   console.log("Expecting: false");
   console.log("=>", isPalindrome("rotated"));
+  console.log("");
 }
 
 module.exports = isPalindrome;
